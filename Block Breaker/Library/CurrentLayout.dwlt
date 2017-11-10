@@ -111,7 +111,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 421}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 14717
+  controlID: 6808
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 421}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 14718
+  controlID: 6809
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -305,7 +305,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoom: 0
@@ -317,18 +317,18 @@ MonoBehaviour:
       y: 17
       width: 577
       height: 183
-    m_Scale: {x: 0.305, y: 0.305}
-    m_Translation: {x: 288.5, y: 91.5}
+    m_Scale: {x: 0.34327924, y: 0.34328014}
+    m_Translation: {x: 288.5, y: 87.815575}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -945.9016
-      y: -300
-      width: 1891.8032
-      height: 600
+      x: -840.42365
+      y: -255.81316
+      width: 1680.8473
+      height: 533.0923
     m_MinimalGUI: 1
   m_defaultScale: 0.305
   m_TargetTexture: {fileID: 0}
@@ -364,14 +364,14 @@ MonoBehaviour:
     width: 577
     height: 393
   m_SceneLighting: 1
-  lastFramingTime: 3625.353901796445
+  lastFramingTime: 2729.1977825999647
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 510.30005, y: 388, z: 0}
+    m_Target: {x: 0, y: 0, z: -5}
     speed: 2
-    m_Value: {x: 510.30005, y: 388, z: 0}
+    m_Value: {x: 0, y: 0, z: -5}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -398,9 +398,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1092.3363
+    m_Target: 11.196135
     speed: 2
-    m_Value: 1092.3363
+    m_Value: 11.196135
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -439,9 +439,9 @@ MonoBehaviour:
     height: 614
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 36250000
+    m_SelectedIDs: 88340000
     m_LastClickedID: 0
-    m_ExpandedIDs: f4f8feff60fbfeffe412ffff5013fffff822ffffde37ffff0e3affff5c3bffff203fffff943ffffffa40ffff6041ffffd441ffff6043ffff2444ffff0c46fffff846ffff6847ffffa448ffffe649ffff244cffff904cffff044dffff704dffffe64fffff5e50ffff4c52ffffbefbffff00000000c83c0000ae3d0000163e0000283e000090400000b84000005a41000020420000
+    m_ExpandedIDs: befbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,18 +501,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scence
+    - Assets/Scrpits
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: I:\Programming for computer games\Repository\Block Breaker
+  m_LastProjectPath: E:\Programming for computer games\Repository\Block Breaker
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f8240000
     m_LastClickedID: 9464
-    m_ExpandedIDs: 00000000fa2400003c25000076250000a2250000aa250000
+    m_ExpandedIDs: 00000000fe2400004025000080250000ac250000b4250000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -540,7 +540,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fa2400003c25000076250000a2250000aa250000
+    m_ExpandedIDs: 00000000fe2400004025000080250000ac250000b4250000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

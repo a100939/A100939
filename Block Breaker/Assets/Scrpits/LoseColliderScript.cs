@@ -8,8 +8,8 @@ public class LoseColliderScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        Cursor.visible = true;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,6 +21,8 @@ public class LoseColliderScript : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         levelManager.LoadNewScene("Lose");
+        
     }
 }

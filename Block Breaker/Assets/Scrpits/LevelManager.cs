@@ -15,8 +15,8 @@ public class LevelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-	    	
-	}
+        Cursor.visible = true;
+    }
     public void LoadNewScene(string sceneName)// biex tarah funitu importanti li ikun PUBLIC
     {
         SceneManager.LoadScene(sceneName);
