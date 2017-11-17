@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scrpits\Ball.cs" />
+    <Compile Include="Assets\Scrpits\Brick.cs" />
     <Compile Include="Assets\Scrpits\LevelManager.cs" />
     <Compile Include="Assets\Scrpits\LoseColliderScript.cs" />
     <Compile Include="Assets\Scrpits\MusicPlayerScript.cs" />
