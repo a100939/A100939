@@ -19,6 +19,7 @@ public class LevelManager : MonoBehaviour {
     }
     public void LoadNewScene(string sceneName)// biex tarah funitu importanti li ikun PUBLIC
     {
+        Brick.breakableCount = 0;
         SceneManager.LoadScene(sceneName);
     }
     public void Quit()
@@ -28,9 +29,13 @@ public class LevelManager : MonoBehaviour {
 
     public void LoadNextScene()
     {
+        Brick.breakableCount = 0;
         int currentScene = SceneManager.GetActiveScene().buildIndex;
-        currentScene++;
-        SceneManager.LoadScene(currentScene);
+        if (Brick.breakableCount == 0)
+        {
+            currentScene++;
+            SceneManager.LoadScene(currentScene);
+        }
     }
 
 }
