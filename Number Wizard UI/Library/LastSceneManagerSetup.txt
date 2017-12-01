@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scence/Win.unity
+- path: Assets/Scence/Lose.unity
   isLoaded: 1
   isActive: 1
