@@ -13,44 +13,90 @@ public class BallScript : MonoBehaviour {
         ball = GetComponent<Rigidbody2D>();
       
 
-        this.transform.position = new Vector3(0f, 0f, 0f);
+        ball.transform.position = new Vector3(0f, 0f, 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!gameStarted)  // if(gameStarted = false
-            this.transform.position = new Vector3(0f, 0f, 0f);
+            ball.transform.position = new Vector3(0f, 0f, 0f);
         if (Input.GetMouseButtonDown(0) && !gameStarted)
         {
-            print("game stared");
+              
+            if (ball.transform.position.x <-6.47f)
+            {
+                ScoreManager.instance.Player1ScoreMain();
+                
+            }
+            if (ball.transform.position.x >6.47f)
+            {
+                ScoreManager.instance.Player2ScoreMain();
+               
+            }
             MoveBall();
-       }
+        }
     
     
-       
+        
 
     }
-    void onCollisionEnter2D(Collision2D hit)
-    {
-        float Player1Coll = this.transform.position.y - GameObject.Find("bat1").transform.position.y;
-        print(Player1Coll);
-        float Player2Coll = this.transform.position.y - GameObject.Find("bat2").transform.position.y;
-        print(Player2Coll);
 
-      
+ 
+
+    private void OnCollisionEnter2D(Collision2D collision2D)
+    {
+        if (collision2D.gameObject.name == "UpCollider")
+        {
+            ball.velocity = new Vector2(ball.velocity.x,ball.velocity.y*1f);
+        }
+        if (collision2D.gameObject.name == "DownCollider")
+        {
+            ball.velocity = new Vector2(ball.velocity.x, ball.velocity.y *1f);
+   
+        }
+            
+   
+            if (collision2D.gameObject.name == "Player2")
+            ball.velocity = new Vector2(-8f, 0f);
+        {
+            if (transform.position.y - collision2D.transform.position.y < -0.6)
+            {
+                ball.velocity = new Vector2(-8f, -8f);
+            }
+            else if (transform.position.y - collision2D.transform.position.y > 0.6)
+            {
+                ball.velocity = new Vector2(-8f, 8f);
+            }
+        }
+        if (collision2D.gameObject.name == "Player1")
+        {
+            ball.velocity = new Vector2(8f, 0f);
+
+            if (transform.position.y - collision2D.transform.position.y < -0.6)
+            {
+                ball.velocity = new Vector2(8f, -8f);
+            }
+            if (transform.position.y - collision2D.transform.position.y > 0.6)
+            {
+                ball.velocity = new Vector2(8f, 8f);
+            }
+        }
+
+
     }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        this.transform.position = new Vector3(0f, 0f, 0f);
+        ball.transform.position = new Vector3(0f, 0f, 0f);
+        Update();
         MoveBall();
-     
+
     }
 
     void MoveBall()
     {
+       
         gameStarted = true;
         int xDirexction = Random.Range(0, 3);
         int yDirexction = Random.Range(0, 3);

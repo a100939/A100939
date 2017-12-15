@@ -17,11 +17,11 @@ public class Player1Controller : MonoBehaviour {
 	void Update () {
         if (Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.UpArrow))
         {
-            player1.velocity = new Vector2(0f, 5f);
+            player1.velocity = new Vector2(0f, 10f);
         }
         else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
-            player1.velocity = new Vector2(0f, -5f);
+            player1.velocity = new Vector2(0f, -10f);
         }
         else
         {

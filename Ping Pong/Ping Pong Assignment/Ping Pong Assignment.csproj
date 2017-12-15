@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Player1Controller.cs" />
     <Compile Include="Assets\Scripts\Player2Controller.cs" />
     <Compile Include="Assets\Scripts\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\ScoreManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Font\bm_block\read me.txt" />

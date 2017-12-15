@@ -20,11 +20,11 @@ public class Player2Controller : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.R))
         {
-            player2.velocity = new Vector2(0f, 5f);
+            player2.velocity = new Vector2(0f, 10f);
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.F))
         {
-            player2.velocity = new Vector2(0f, -5f);
+            player2.velocity = new Vector2(0f, -10f);
         }
         else
         {
