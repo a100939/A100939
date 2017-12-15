@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         instance = this;
-        Player1Score = Player2Score = 0;
+       // Player1Score = Player2Score = 0;
 		
 	}
 	

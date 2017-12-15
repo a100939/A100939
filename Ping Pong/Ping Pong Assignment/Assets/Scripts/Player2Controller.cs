@@ -18,17 +18,13 @@ public class Player2Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.R))
-        {
-            player2.velocity = new Vector2(0f, 10f);
-        }
-        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.F))
-        {
-            player2.velocity = new Vector2(0f, -10f);
-        }
-        else
-        {
-            player2.velocity = new Vector2(0f, 0f);
-        }
+        
+        float mousePosInUnits = (Input.mousePosition.y / Screen.height * 10) - 5;
+        mousePosInUnits = Mathf.Clamp(mousePosInUnits, -3.9f, 3.9f);
+
+        Vector3 Player2Paddle = new Vector3(player2.transform.position.x, mousePosInUnits, player2.transform.position.z);
+        player2.transform.position=Player2Paddle;
+        //Cursor.visible = false;
     }
+
 }
