@@ -30,7 +30,11 @@ public class ScoreManager : MonoBehaviour {
 
     public void Player2ScoreMain()
     {
-        Player2Score +=1;
+       
         Player2ScoreText.text = Player2Score.ToString();
+    }
+    public void totalScore()
+    {
+
     }
 }

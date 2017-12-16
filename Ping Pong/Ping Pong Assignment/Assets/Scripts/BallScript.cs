@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //used this for text
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class BallScript : MonoBehaviour {
@@ -15,8 +16,14 @@ public class BallScript : MonoBehaviour {
     public Text Player2ScoreText;
     //set score per goal 
     public int ScorePerGoal;
-    int[] totoalScore;
-    public int score;
+    public int[] scorelist1 =  new int [3];
+    public int[] scorelist2 = new int[3];
+    public int maxscore;
+    public int score1;
+    public int score2;
+    public int totalscore1;
+    public int totalscore2;
+
 
 
 
@@ -25,14 +32,30 @@ public class BallScript : MonoBehaviour {
     {
         //set varible to ball in game
         ball = GetComponent<Rigidbody2D>();
-      
+
         //set postion of ball in center when starting the game
-        ball.transform.position = new Vector3(0f, 0f,-5f);
+        ball.transform.position = new Vector3(0f, 0f, -5f);
+        score1 = 0;
+        score2 = 0; 
+        Player1ScoreText.text = score1.ToString();
+        Player2ScoreText.text = score2.ToString();
+
+
+
     }
+
+   
 
     // Update is called once per frame
     void Update()
     {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("End"))
+        {
+            SceneManager.LoadScene("Start");
+            Debug.Log("hello");
+            print("Hello");
+        }
+
         //if game is false
         if (!gameStarted)
             //ball stays in center
@@ -43,7 +66,26 @@ public class BallScript : MonoBehaviour {
             //function to move ball
             MoveBall();
         }
+        Cursor.visible = false;
+
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        if (score1 == maxscore || score2==maxscore)
+        {
+            for (int i = 0; i < scorelist1.Length; i++)
+            {
+                score1 = totalscore1;
+                scorelist1[i] = totalscore1;
+            }
+            for (int i = 0; i < scorelist2.Length; i++)
+            {
+                score2 = totalscore2;
+                scorelist1[i] = totalscore2;
+            }
+            currentScene++;
+            SceneManager.LoadScene(currentScene);
    
+        }
+
     }
 
  
@@ -81,9 +123,6 @@ public class BallScript : MonoBehaviour {
       
         }
 
-  
-        
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -91,26 +130,24 @@ public class BallScript : MonoBehaviour {
         ball.transform.position = new Vector3(0f, 0f,-5f);
         if (collision.gameObject.name == "Player1ScoreCollider")
         {
-
-            score+=ScorePerGoal;
-            Player1ScoreText.text =score.ToString();
+            score1+=ScorePerGoal;
+            totalscore1 += score1;
+            Player1ScoreText.text =score1.ToString();
+            
         }
         if (collision.gameObject.name == "Player2ScoreCollider")
         {
 
-            score += ScorePerGoal;
-            Player2ScoreText.text = score.ToString();
+            score2 += ScorePerGoal;
+            Player2ScoreText.text = score2.ToString();
+            
         }
-
-
-
         MoveBall();
-
     }
 
     void MoveBall()
     {
-       
+
         gameStarted = true;
         int xDirexction = Random.Range(0, 3);
         int yDirexction = Random.Range(0, 3);
@@ -137,6 +174,7 @@ public class BallScript : MonoBehaviour {
         }
         ball.velocity = launchBall;
     }
+
 }
 
 
