@@ -18,14 +18,17 @@ public class BallScript : MonoBehaviour {
     //set this for final score
     public Text Player1MaxScoreText;
     public Text Player2MaxScoreText;
+    // End Scene Text
+    public Text Player1WinText;
+    public Text Player2WinText;
     //set score per goal 
     public int ScorePerGoal;
     //max score
     public int maxscore;
-    //player one max score
-    public int playerMaxscore1;
-    //player two max score
-    public int playerMaxscore2;
+    //player one total score keep score
+    public static int playerMaxscore1;
+    //player two total score keep score
+    public static int playerMaxscore2;
     //score per level
     public int score1;
     public int score2;
@@ -61,6 +64,7 @@ public class BallScript : MonoBehaviour {
         //text wont show
         Player1MaxScoreText.enabled = false;
         Player2MaxScoreText.enabled = false;
+  
 
         //if scene is end
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("End"))
@@ -69,7 +73,10 @@ public class BallScript : MonoBehaviour {
             if(playerMaxscore1>playerMaxscore2)
             //show player one score hide other scores
             Player1MaxScoreText.enabled = true;
+            Player1WinText.enabled = true;
+            Player1MaxScoreText.text = playerMaxscore1.ToString();
             Player2MaxScoreText.enabled = false;
+            Player2WinText.enabled = false;
             Player1ScoreText.enabled = false;
             Player2ScoreText.enabled = false;
             //if player 2 score is bigger then player 1 score
@@ -77,7 +84,10 @@ public class BallScript : MonoBehaviour {
             {
                 //show player two score hide other scores
                 Player1MaxScoreText.enabled = false;
+                Player1WinText.enabled = false;
+                Player2MaxScoreText.text = playerMaxscore2.ToString();
                 Player2MaxScoreText.enabled = true;
+                Player2WinText.enabled = true;
                 Player1ScoreText.enabled = false;
                 Player2ScoreText.enabled = false;
             }
@@ -86,7 +96,11 @@ public class BallScript : MonoBehaviour {
             {
                 //show both scores
                 Player1MaxScoreText.enabled = true;
+                Player1WinText.enabled = true;
+                Player1MaxScoreText.text = playerMaxscore1.ToString();
                 Player2MaxScoreText.enabled = true;
+                Player2WinText.enabled = true;
+                Player2MaxScoreText.text = playerMaxscore2.ToString();
                 Player1ScoreText.enabled = false;
                 Player2ScoreText.enabled = false;
             }
@@ -167,7 +181,7 @@ public class BallScript : MonoBehaviour {
             //player one score increase per level
             score1+=ScorePerGoal;
             //player one score increase per game
-            playerMaxscore1++;
+            playerMaxscore1+=score1;
             //set score per level to text to be shown
             Player1ScoreText.text =score1.ToString();
          
@@ -176,7 +190,7 @@ public class BallScript : MonoBehaviour {
         if (collision.gameObject.name == "Player2ScoreCollider")
         {
             score2 += ScorePerGoal;
-            playerMaxscore2++;
+            playerMaxscore2+=score2;
             Player2ScoreText.text = score2.ToString();
        
         }
