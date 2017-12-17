@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 //used this for text
 using UnityEngine.UI;
+//For Scene chaning
 using UnityEngine.SceneManagement;
 
 
@@ -14,15 +15,21 @@ public class BallScript : MonoBehaviour {
     //set score text for player 1 & 2 will be displayed on the screen
     public Text Player1ScoreText;
     public Text Player2ScoreText;
+    //set this for final score
+    public Text Player1MaxScoreText;
+    public Text Player2MaxScoreText;
     //set score per goal 
     public int ScorePerGoal;
-    public int[] scorelist1 =  new int [3];
-    public int[] scorelist2 = new int[3];
+    //max score
     public int maxscore;
+    //player one max score
+    public int playerMaxscore1;
+    //player two max score
+    public int playerMaxscore2;
+    //score per level
     public int score1;
     public int score2;
-    public int totalscore1;
-    public int totalscore2;
+
 
 
 
@@ -35,8 +42,10 @@ public class BallScript : MonoBehaviour {
 
         //set postion of ball in center when starting the game
         ball.transform.position = new Vector3(0f, 0f, -5f);
+        //set scores start 0
         score1 = 0;
         score2 = 0; 
+        // score set to text
         Player1ScoreText.text = score1.ToString();
         Player2ScoreText.text = score2.ToString();
 
@@ -49,39 +58,61 @@ public class BallScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        //text wont show
+        Player1MaxScoreText.enabled = false;
+        Player2MaxScoreText.enabled = false;
+
+        //if scene is end
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("End"))
         {
-            SceneManager.LoadScene("Start");
-            Debug.Log("hello");
-            print("Hello");
+            //if player 1 score is bigger then player 2 score
+            if(playerMaxscore1>playerMaxscore2)
+            //show player one score hide other scores
+            Player1MaxScoreText.enabled = true;
+            Player2MaxScoreText.enabled = false;
+            Player1ScoreText.enabled = false;
+            Player2ScoreText.enabled = false;
+            //if player 2 score is bigger then player 1 score
+            if (playerMaxscore2 > playerMaxscore1)
+            {
+                //show player two score hide other scores
+                Player1MaxScoreText.enabled = false;
+                Player2MaxScoreText.enabled = true;
+                Player1ScoreText.enabled = false;
+                Player2ScoreText.enabled = false;
+            }
+            // if scores are equal
+            if(playerMaxscore1 == playerMaxscore2)
+            {
+                //show both scores
+                Player1MaxScoreText.enabled = true;
+                Player2MaxScoreText.enabled = true;
+                Player1ScoreText.enabled = false;
+                Player2ScoreText.enabled = false;
+            }
+    
         }
 
         //if game is false
         if (!gameStarted)
             //ball stays in center
             ball.transform.position = new Vector3(0f, 0f,-5f);
-        //if mouse left button is clicked and gameStarted is false start game.
+        //if mouse left button is clicked and gameStarted is false call ball move function.
         if (Input.GetMouseButtonDown(0) && !gameStarted)
         {
             //function to move ball
             MoveBall();
         }
+        //mouse invisble
         Cursor.visible = false;
-
+        //set varible for current scene
         int currentScene = SceneManager.GetActiveScene().buildIndex;
+        //if player 1 score or player 2 score reach max score
         if (score1 == maxscore || score2==maxscore)
         {
-            for (int i = 0; i < scorelist1.Length; i++)
-            {
-                score1 = totalscore1;
-                scorelist1[i] = totalscore1;
-            }
-            for (int i = 0; i < scorelist2.Length; i++)
-            {
-                score2 = totalscore2;
-                scorelist1[i] = totalscore2;
-            }
+            //add one to current scene
             currentScene++;
+            //load scene
             SceneManager.LoadScene(currentScene);
    
         }
@@ -125,55 +156,77 @@ public class BallScript : MonoBehaviour {
 
     }
 
+    //on trigger function
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // set ball position to center
         ball.transform.position = new Vector3(0f, 0f,-5f);
+        //if ball hits player 2 score area
         if (collision.gameObject.name == "Player1ScoreCollider")
         {
+            //player one score increase per level
             score1+=ScorePerGoal;
-            totalscore1 += score1;
+            //player one score increase per game
+            playerMaxscore1++;
+            //set score per level to text to be shown
             Player1ScoreText.text =score1.ToString();
-            
+         
         }
+        //same thing as for player one
         if (collision.gameObject.name == "Player2ScoreCollider")
         {
-
             score2 += ScorePerGoal;
+            playerMaxscore2++;
             Player2ScoreText.text = score2.ToString();
-            
+       
         }
+        //call function move ball
         MoveBall();
     }
-
+    //ball movement
     void MoveBall()
     {
-
+        //game is true
         gameStarted = true;
+        //x direction random 3 posssiblties
         int xDirexction = Random.Range(0, 3);
+        //y direction random 3 posssiblties
         int yDirexction = Random.Range(0, 3);
-        Vector2 launchBall = new Vector2();        
+        //set varible to start ball
+        Vector2 launchBall = new Vector2();      
+        // if x is 0
         if (xDirexction == 0)
         {
+            // ball goes left
             launchBall.x = -8f;
         }
         else 
         {
+            //ball goese right
             launchBall.x = 8f;
         }
+        //if y is 0
         if (yDirexction == 0)
         {
+            //ball stays the same on the y axis
             launchBall.y = 0f;
         }
+        //if y is 1
         else if (yDirexction == 1)
         {
+            //ball goes down
             launchBall.y = -8f;
         }
+        //if y is 2
         else if (yDirexction == 2)
         {
+            //ball goes up
             launchBall.y = 8f;
         }
+        //ball spped is same as ball direction
         ball.velocity = launchBall;
     }
+
 
 }
 

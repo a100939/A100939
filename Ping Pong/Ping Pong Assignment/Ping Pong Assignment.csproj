@@ -83,9 +83,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BallScript.cs" />
     <Compile Include="Assets\Scripts\ManagerScene.cs" />
+    <Compile Include="Assets\Scripts\ObsticaleMovement.cs" />
     <Compile Include="Assets\Scripts\Player1Controller.cs" />
     <Compile Include="Assets\Scripts\Player2Controller.cs" />
-    <Compile Include="Assets\Scripts\ScoreManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Font\bm_block\read me.txt" />
