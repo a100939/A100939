@@ -1,0 +1,12 @@
+\\main\lect_redir$\jamesd\mydocs\visual studio 2017\Projects\Encapsulation\Encapsulation\bin\Debug\Encapsulation.exe.config
+\\main\lect_redir$\jamesd\mydocs\visual studio 2017\Projects\Encapsulation\Encapsulation\bin\Debug\Encapsulation.exe
+\\main\lect_redir$\jamesd\mydocs\visual studio 2017\Projects\Encapsulation\Encapsulation\bin\Debug\Encapsulation.pdb
+\\main\lect_redir$\jamesd\mydocs\visual studio 2017\Projects\Encapsulation\Encapsulation\obj\Debug\Encapsulation.csprojResolveAssemblyReference.cache
+\\main\lect_redir$\jamesd\mydocs\visual studio 2017\Projects\Encapsulation\Encapsulation\obj\Debug\Encapsulation.exe
+\\main\lect_redir$\jamesd\mydocs\visual studio 2017\Projects\Encapsulation\Encapsulation\obj\Debug\Encapsulation.pdb
+P:\Lecturers\James Decelis\4.2D\Employees Payroll\Encapsulation\bin\Debug\Encapsulation.exe.config
+P:\Lecturers\James Decelis\4.2D\Employees Payroll\Encapsulation\bin\Debug\Encapsulation.exe
+P:\Lecturers\James Decelis\4.2D\Employees Payroll\Encapsulation\bin\Debug\Encapsulation.pdb
+P:\Lecturers\James Decelis\4.2D\Employees Payroll\Encapsulation\obj\Debug\Encapsulation.csprojResolveAssemblyReference.cache
+P:\Lecturers\James Decelis\4.2D\Employees Payroll\Encapsulation\obj\Debug\Encapsulation.exe
+P:\Lecturers\James Decelis\4.2D\Employees Payroll\Encapsulation\obj\Debug\Encapsulation.pdb

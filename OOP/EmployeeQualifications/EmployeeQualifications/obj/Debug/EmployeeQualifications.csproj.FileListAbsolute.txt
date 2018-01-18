@@ -1,0 +1,6 @@
+\\main\lect_redir$\jamesd\mydocs\visual studio 2017\Projects\EmployeeQualifications\EmployeeQualifications\bin\Debug\EmployeeQualifications.exe.config
+\\main\lect_redir$\jamesd\mydocs\visual studio 2017\Projects\EmployeeQualifications\EmployeeQualifications\bin\Debug\EmployeeQualifications.exe
+\\main\lect_redir$\jamesd\mydocs\visual studio 2017\Projects\EmployeeQualifications\EmployeeQualifications\bin\Debug\EmployeeQualifications.pdb
+\\main\lect_redir$\jamesd\mydocs\visual studio 2017\Projects\EmployeeQualifications\EmployeeQualifications\obj\Debug\EmployeeQualifications.csprojResolveAssemblyReference.cache
+\\main\lect_redir$\jamesd\mydocs\visual studio 2017\Projects\EmployeeQualifications\EmployeeQualifications\obj\Debug\EmployeeQualifications.exe
+\\main\lect_redir$\jamesd\mydocs\visual studio 2017\Projects\EmployeeQualifications\EmployeeQualifications\obj\Debug\EmployeeQualifications.pdb

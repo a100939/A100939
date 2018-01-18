@@ -1,0 +1,6 @@
+P:\Lecturers\James Decelis\4.2D\PizzaRestaurant\PizzaRestaurant\bin\Debug\PizzaRestaurant.exe.config
+P:\Lecturers\James Decelis\4.2D\PizzaRestaurant\PizzaRestaurant\bin\Debug\PizzaRestaurant.exe
+P:\Lecturers\James Decelis\4.2D\PizzaRestaurant\PizzaRestaurant\bin\Debug\PizzaRestaurant.pdb
+P:\Lecturers\James Decelis\4.2D\PizzaRestaurant\PizzaRestaurant\obj\Debug\PizzaRestaurant.csprojResolveAssemblyReference.cache
+P:\Lecturers\James Decelis\4.2D\PizzaRestaurant\PizzaRestaurant\obj\Debug\PizzaRestaurant.exe
+P:\Lecturers\James Decelis\4.2D\PizzaRestaurant\PizzaRestaurant\obj\Debug\PizzaRestaurant.pdb

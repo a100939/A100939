@@ -1,0 +1,6 @@
+P:\Lecturers\James Decelis\ClassObject\bin\Debug\OOPDemo.exe.config
+P:\Lecturers\James Decelis\ClassObject\bin\Debug\OOPDemo.exe
+P:\Lecturers\James Decelis\ClassObject\bin\Debug\OOPDemo.pdb
+P:\Lecturers\James Decelis\ClassObject\obj\Debug\BankAccount.csprojResolveAssemblyReference.cache
+P:\Lecturers\James Decelis\ClassObject\obj\Debug\OOPDemo.exe
+P:\Lecturers\James Decelis\ClassObject\obj\Debug\OOPDemo.pdb

@@ -1,0 +1,6 @@
+P:\Lecturers\James Decelis\4.2D\Items\Items\Items\bin\Debug\Items.exe.config
+P:\Lecturers\James Decelis\4.2D\Items\Items\Items\bin\Debug\Items.exe
+P:\Lecturers\James Decelis\4.2D\Items\Items\Items\bin\Debug\Items.pdb
+P:\Lecturers\James Decelis\4.2D\Items\Items\Items\obj\Debug\Items.csprojResolveAssemblyReference.cache
+P:\Lecturers\James Decelis\4.2D\Items\Items\Items\obj\Debug\Items.exe
+P:\Lecturers\James Decelis\4.2D\Items\Items\Items\obj\Debug\Items.pdb
